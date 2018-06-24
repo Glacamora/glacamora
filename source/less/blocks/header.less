@@ -19,6 +19,7 @@
   justify-content: center;
   font-size: 18px;
   letter-spacing: 3px;
+  padding-left: 0;
 
     li {
       margin-left: 25px;
@@ -43,5 +44,36 @@
   .header__list {
     flex-direction: column;
     align-items: center;
+
+      li {
+        margin-left: 0;
+        margin-top: 20px;
+
+        &:first-of-type {
+          margin-top: 0;
+        }
+
+        &:last-of-type {
+          margin-left: 0;
+        }
+      }
+  }
+}
+
+@media (max-width: 490px) {
+  .header {
+    background-size: 390px;
+  }
+}
+
+@media (max-width: 405px) {
+  .header {
+    background-size: 350px;
+  }
+}
+
+@media (max-width: 360px) {
+  .header {
+    background-size: 330px;
   }
 }
