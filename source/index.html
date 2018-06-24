@@ -11,8 +11,9 @@
       <div class="container">
         <nav class="header__nav">
           <ul class="header__list">
-            <li>About</li>
-            <li>Portfolio</li>
+            <li><a>About</a></li>
+            <li><a>Portfolio</a></li>
+            <li><a>Contact</a></li>
             <li><a href="mailto:glacamora@mail.ru" class="header__mail">glacamora@mail.ru</a></li>
           </ul>
         </nav>
@@ -33,27 +34,71 @@
             <div class="portfolio__main-title">
               <h2>Portfolio</h2>
             </div>
-            <div class="porfolio__slider">
+            <div class="portfolio__slider">
               <ul class="portfolio__filter-titles">
-                <li>studies</li>
-                <li>fun</li>
-                <li>commercial</li>
+                <li>All</li>
+                <li>Studies</li>
+                <li>Fun</li>
+                <li>Commercial</li>
               </ul>
               <div class="portfolio__items">
                 <div class="portfolio__item">
-                  <img src="../img/pink.jpg" height="350px" width="200px">
+                  <img src="../img/pink.jpg" height="400px" width="200px">
                   <h2>Pink</h2>
                   <a>glacamora . com /</a>
-                  <p>Adaptive website from <br>HTMLAcademy courses</p>
+                  <p>Adaptive website from HTMLAcademy courses</p>
                 </div>
 
                 <div class="portfolio__item">
-                  <img src="../img/pink.jpg" height="350px" width="200px">
+                  <img src="../img/Nerds.jpg" height="400px" width="200px">
                   <h2>Nerds</h2>
                   <a>glacamora . com /</a>
-                  <p>Nondaptive website from <br>HTMLAcademy courses</p>
+                  <p>Nonadaptive website from HTMLAcademy courses</p>
+                </div>
+
+                <div class="portfolio__item">
+                  <img src="../img/honeywhite.jpg" height="400px" width="200px">
+                  <h2>HoneyWhite</h2>
+                  <a>glacamora . com /</a>
+                  <p>Adaptive (rubber) website on free layout from the Internet</p>
+                </div>
+
+                <div class="portfolio__item">
+                  <img src="../img/4agency.jpg" height="400px" width="200px">
+                  <h2>4agency</h2>
+                  <a>glacamora . com /</a>
+                  <p>Nonadaptive website for commercial progect</p>
+                </div>
+
+                <div class="portfolio__item">
+                  <img src="../img/glacamora.jpg" height="400px" width="200px">
+                  <h2>Personal website</h2>
+                  <a>glacamora . com</a>
+                  <p>You are here</p>
                 </div>
               </div>
+          </div>
+        </section>
+        <section class="contact">
+          <div class="contact__title">
+            <h2>Write me</h2>
+          </div>
+          <div class="contact__form">
+            <form action="#" class="popup-form" method="post">
+              <p class="contact__form-name">
+                <label for="name" class="contact__form-text">Ваше имя:</label>
+                <input class="popup-input" type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста">
+              </p>
+              <p class="contact__form-mail">
+                <label for="email" class="contact__form-text">Ваш e-mail:</label>
+                <input class="contact__form-input" type="email" id="email" name="email" placeholder="Для отправки ответа">
+              </p>
+              <p class="contact__form-text">
+                <label for="text" class="contact__form-text">Текст письма:</label>
+                <textarea class="contact__form-textarea" name="text" id="text" rows="5" placeholder="В свободной форме"></textarea>
+              </p>
+              <button class="contact__form-btn" type="submit"><span>Отправить</span></button>
+            </form>
           </div>
         </section>
       </div>
