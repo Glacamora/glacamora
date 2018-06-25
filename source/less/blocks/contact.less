@@ -17,9 +17,151 @@
     }
 }
 
-.contact__form {
+.contact__container {
   padding-left: 50px;
   padding-right: 40px;
   flex-basis: 70%;
   border-left: 2px solid #07eff9;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.contact__form-text {
+  font-size: 18px;
+}
+
+.contact__form-fieldset {
+  border: none;
+  flex-basis: 24%;
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.contact__form-input {
+  padding: 10px 50px 10px 10px;
+  border: 1px solid #f6f6f6;
+  background-color: #fbfbfb;
+
+    &:focus {
+      border: 1px solid #258e8a;
+      outline: none;
+    }
+}
+
+.contact__form-message {
+  flex-basis: 69%;
+  padding-top: 13px;
+}
+
+.contact__form-textarea {
+  padding: 16px 22px;
+  width: 100%;
+  height: 12.8%;
+  border: 1px solid #f6f6f6;
+  background-color: #fbfbfb;
+
+    &:focus {
+      border: 1px solid #258e8a;
+      outline: none;
+    }
+}
+
+.contact__form-btn {
+  border: 0;
+  padding: 9px 60px;
+  font-size: 18px;
+  background-color: #15514f;
+  color: #fff;
+  margin-top: 35px;
+  margin-left: 30.5%;
+
+    &:hover {
+      background-color: #103d3b;
+    }
+
+    &:active {
+      background-color: #0b2928;
+    }
+}
+
+@media (min-width: 1184px) {
+  .contact__form-fieldset:first-of-type {
+      padding-right: 45px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .contact__container {
+    padding-right: 0;
+  }
+
+  .contact__form-btn {
+    margin-left: 31%;
+  }
+}
+
+@media (max-width: 1183px) {
+  .contact__form-btn {
+    margin-left: 0;
+  }
+
+  .contact__form-message {;
+    flex-basis: 97%;
+  }
+}
+
+@media (max-width: 712px) {
+  .contact {
+    flex-direction: column;
+  }
+
+  .contact__title {
+    h2 {
+      position: relative;
+
+      &::before {
+        content: "";
+        border: 1px solid #07eff9;
+        position: absolute;
+        top: 40px;
+        width: 99px;
+      }
+    }
+}
+
+  .contact__title {
+    flex-basis: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .contact__container {
+    border-left: 0;
+    flex-basis: 0;
+    padding-left: 0;
+  }
+  .contact__form-fieldset {
+    width: 100%;
+
+      &:first-of-type {
+        flex-basis: auto;
+      }
+
+      p {
+        width: 100%;
+      }
+  }
+
+  .contact__form-input {
+    width: 100%;
+  }
+
+  .contact__form-message {
+    flex-basis: 100%;
+  }
 }

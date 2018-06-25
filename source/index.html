@@ -74,7 +74,7 @@
                   <img src="../img/glacamora.jpg" height="400px" width="200px">
                   <h2>Personal website</h2>
                   <a>glacamora . com</a>
-                  <p>You are here</p>
+                  <p>You are here ;)</p>
                 </div>
               </div>
           </div>
@@ -83,21 +83,25 @@
           <div class="contact__title">
             <h2>Write me</h2>
           </div>
-          <div class="contact__form">
-            <form action="#" class="popup-form" method="post">
-              <p class="contact__form-name">
-                <label for="name" class="contact__form-text">Ваше имя:</label>
-                <input class="popup-input" type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста">
-              </p>
-              <p class="contact__form-mail">
-                <label for="email" class="contact__form-text">Ваш e-mail:</label>
-                <input class="contact__form-input" type="email" id="email" name="email" placeholder="Для отправки ответа">
-              </p>
-              <p class="contact__form-text">
-                <label for="text" class="contact__form-text">Текст письма:</label>
-                <textarea class="contact__form-textarea" name="text" id="text" rows="5" placeholder="В свободной форме"></textarea>
-              </p>
-              <button class="contact__form-btn" type="submit"><span>Отправить</span></button>
+          <div class="contact__container">
+            <form action="#" class="contact__form" method="post">
+              <fieldset class="contact__form-fieldset">
+                <p class="contact__form-name">
+                  <label for="name" class="contact__form-text">Your name:</label>
+                  <input class="contact__form-input" type="text" id="name" name="name" placeholder="Please introduce yourself">
+                </p>
+                <p class="contact__form-mail">
+                  <label for="email" class="contact__form-text">Your email:</label>
+                  <input class="contact__form-input" type="email" id="email" name="email" placeholder="Please enter email">
+                </p>
+              </fieldset>
+              <fieldset class="contact__form-fieldset contact__form-message">
+
+                  <label for="text" class="contact__form-text">Your message:</label>
+                  <textarea class="contact__form-textarea" name="text" id="text" rows="5" placeholder="You can ask me anything about my work and etc"></textarea>
+
+              </fieldset>
+              <button class="contact__form-btn" type="submit"><span>Send</span></button>
             </form>
           </div>
         </section>
