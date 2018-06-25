@@ -58,6 +58,39 @@
   padding-top: 30px;
   flex-basis: 20%;
   padding-left: 50px;
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: #15514f;
+      cursor: pointer;
+      text-decoration: none;
+
+      &:hover {
+        color: #103d3b;
+        font-weight: 600;
+      }
+
+      &:active {
+        color: #0b2928;
+      }
+    }
+
+    p {
+      margin-bottom: 5px;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 45px;
+        border-bottom: 1px solid #15514f;
+        position: absolute;
+        top: 55px;
+        left: 0;
+      }
+    }
 }
 
 @media (max-width: 712px) {
