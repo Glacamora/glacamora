@@ -43,7 +43,7 @@
               </ul>
               <div class="portfolio__items">
                 <div class="portfolio__item">
-                  <img src="../img/pink.jpg" height="480px" width="239px">
+                  <img src="../img/pink.jpg" height="480px " width="239px">
                   <h2>Pink</h2>
                   <a>glacamora.com/</a>
                   <p>Adaptive website from HTMLAcademy courses</p>
@@ -96,10 +96,12 @@
                 </p>
               </fieldset>
               <fieldset class="contact__form-fieldset contact__form-message">
-
                   <label for="text" class="contact__form-text">Your message:</label>
                   <textarea class="contact__form-textarea" name="text" id="text" rows="5" placeholder="You can ask me anything about my work and etc"></textarea>
-
+              </fieldset>
+              <fieldset class="contact__form-fieldset">
+                <input type="checkbox" class="contact__form-input-checkbox" name="confidence" id="confidence">
+                <label for="confidence" class="contact__form-checkbox">I agree to the processing of personal data</label>
               </fieldset>
               <button class="contact__form-btn" type="submit"><span>Send</span></button>
             </form>
@@ -115,5 +117,9 @@
         </div>
       </div>
     </footer>
+    <div class="popup-posted">
+      <button class="popup-posted__button">Close</button>
+      <p>Thank you! Your message are sended. I will connect with you soon.</p>
+    </div>
   </body>
 </html>
