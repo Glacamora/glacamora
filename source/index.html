@@ -11,15 +11,15 @@
       <div class="container">
         <nav class="header__nav">
           <ul class="header__list">
-            <li><a>About</a></li>
-            <li><a>Portfolio</a></li>
-            <li><a>Contact</a></li>
+            <li><a href="#anchor-about" class="header__link">About</a></li>
+            <li><a href="#anchor-portfolio" class="header__link">Portfolio</a></li>
+            <li><a href="#anchor-contact" class="header__link">Contact</a></li>
             <li><a href="mailto:glacamora@mail.ru" class="header__mail">glacamora@mail.ru</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <main class="main">
+    <main class="main" id="anchor-about">
       <div class="container">
         <section class="main__about">
           <div class="main__about-title">
@@ -31,46 +31,46 @@
           </div>
         </section>
         <section class="portfolio">
-            <div class="portfolio__main-title">
+            <div class="portfolio__main-title" id="anchor-portfolio">
               <h2>Portfolio</h2>
             </div>
             <div class="portfolio__slider">
               <ul class="portfolio__filter-titles">
-                <li>All</li>
-                <li>Studies</li>
-                <li>Fun</li>
-                <li>Commercial</li>
+                <li class="portfolio__filter-list portfolio__filter-list_active all">All</li>
+                <li class="portfolio__filter-list studies">Studies</li>
+                <li class="portfolio__filter-list fun">Fun</li>
+                <li class="portfolio__filter-list commercial">Commercial</li>
               </ul>
               <div class="portfolio__items">
-                <div class="portfolio__item">
+                <div class="portfolio__item studies-item">
                   <img src="../img/pink.jpg" height="480px " width="239px">
                   <h2>Pink</h2>
                   <a href="#">glacamora.com/</a>
                   <p>Adaptive website from HTMLAcademy courses</p>
                 </div>
 
-                <div class="portfolio__item">
+                <div class="portfolio__item studies-item">
                   <img src="../img/Nerds.jpg" height="480px" width="239px">
                   <h2>Nerds</h2>
                   <a href="#">glacamora.com/</a>
                   <p>Nonadaptive website from HTMLAcademy courses</p>
                 </div>
 
-                <div class="portfolio__item">
+                <div class="portfolio__item fun-item">
                   <img src="../img/honeywhite.jpg" height="480px" width="239px">
                   <h2>HoneyWhite</h2>
                   <a href="#">glacamora.com/</a>
                   <p>Adaptive (rubber) website on free layout from the Internet</p>
                 </div>
 
-                <div class="portfolio__item">
+                <div class="portfolio__item commercial-item">
                   <img src="../img/4agency.jpg" height="480px" width="239px">
                   <h2>4agency</h2>
                   <a href="#">glacamora.com/</a>
                   <p>Nonadaptive website for commercial progect</p>
                 </div>
 
-                <div class="portfolio__item">
+                <div class="portfolio__item commercial-item">
                   <img src="../img/glacamora.jpg" height="480px" width="239px">
                   <h2>Glacamora</h2>
                   <a href="#">glacamora.com</a>
@@ -84,7 +84,7 @@
             <h2>Write me</h2>
           </div>
           <div class="contact__container">
-            <form action="#" class="contact__form" method="post">
+            <form action="#" class="contact__form" id="anchor-contact" method="post">
               <fieldset class="contact__form-fieldset">
                 <p class="contact__form-name">
                   <label for="name" class="contact__form-text">Your name:</label>
@@ -121,5 +121,6 @@
       <button class="popup-posted__button">Close</button>
       <p>Thank you! Your message are sended. I will connect with you soon.</p>
     </div>
+    <script src="../js/scripts.min.js"></script>
   </body>
 </html>
