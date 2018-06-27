@@ -39,6 +39,20 @@
   padding: 0;
   margin-left: 0;
   margin-right: 0;
+
+  &_checkbox {
+    margin-top: 10px;
+    flex-basis: 32%;
+    margin-left: 7px;
+    position: relative;
+  }
+
+  p {
+
+    &:first-of-type {
+    margin-top: 7px;
+    }
+  }
 }
 
 .contact__form-input {
@@ -52,15 +66,43 @@
     }
 }
 
+.contact__form-input-checkbox+.contact__form-checkbox::before {
+  content: "";
+  border: 1px solid rgba(37, 142, 138, .5);
+  border-radius: 2px;
+  background-image: url("../img/i_checkbox.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 18px;
+  background-color: #fff;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: -3px;
+  left: -5px;
+}
+
+.contact__form-input-checkbox:checked+.contact__form-checkbox::before {
+    background-image: none;
+}
+
+.contact__form-input-checkbox:hover+.contact__form-checkbox::before {
+    border-color: rgba(37, 142, 138, 1);
+}
+
+.contact__form-input-checkbox:focus+.contact__form-checkbox::before {
+    border-color: rgba(37, 142, 138, 1);
+}
+
 .contact__form-message {
   flex-basis: 69%;
-  padding-top: 13px;
+  padding-top: 7px;
 }
 
 .contact__form-textarea {
-  padding: 16px 22px;
+  padding: 16px 10px;
   width: 100%;
-  height: 12.8%;
+  height: 12.4%;
   border: 1px solid #f6f6f6;
   background-color: #fbfbfb;
 
@@ -70,6 +112,11 @@
     }
 }
 
+.contact__form-checkbox {
+  letter-spacing: 1;
+  padding-left: 15px;
+}
+
 .contact__form-btn {
   border: 0;
   padding: 9px 60px;
@@ -77,7 +124,7 @@
   background-color: #15514f;
   color: #fff;
   margin-top: 35px;
-  margin-left: 30.5%;
+  margin-left: 80%;
 
     &:hover {
       background-color: #103d3b;
@@ -90,25 +137,33 @@
 
 @media (min-width: 1184px) {
   .contact__form-fieldset:first-of-type {
-      padding-right: 45px;
+    padding-right: 45px;
   }
 }
 
 @media (max-width: 1200px) {
-  .contact__form-btn {
-    margin-left: 31%;
-  }
-}
-
-@media (max-width: 1183px) {
-  .contact__form-btn {
-    margin-left: 0;
+  .contact__form {
+    flex-direction: column;
   }
 
   .contact__form-message {;
-    flex-basis: 97%;
+    flex-basis: 0;
+  }
+
+  .contact__form-fieldset {
+    flex-basis: 0;
+
+    &_checkbox {
+      margin-top: 20px;
+    }
+  }
+
+  .contact__form-btn {
+    width: 160px;
+    align-self: flex-end;
   }
 }
+
 
 @media (max-width: 712px) {
   .contact {
@@ -154,9 +209,5 @@
 
   .contact__form-input {
     width: 100%;
-  }
-
-  .contact__form-message {
-    flex-basis: 100%;
   }
 }
