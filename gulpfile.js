@@ -56,6 +56,12 @@ gulp.task("html", function() {
     .pipe(gulp.dest("build"));
 });
 
+gulp.task("php", function() {
+  return gulp.src("source/php/*.php")
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest("build"));
+});
+
 gulp.task("build", function (done) {
   run(
     "clean",
@@ -63,6 +69,7 @@ gulp.task("build", function (done) {
     "html",
     "style",
     "js",
+    "php",
     done
   );
 });

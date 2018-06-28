@@ -7,7 +7,7 @@
 
 .contact__title {
   padding-right: 50px;
-  flex-basis: 17%;
+  flex-basis: 21%;
   text-align: right;
 
     h2 {
@@ -19,14 +19,16 @@
 
 .contact__container {
   padding-left: 50px;
-  flex-basis: 70%;
+  /*flex-basis: 70%;*/
   border-left: 2px solid #07eff9;
+  width: 100%;
 }
 
 .contact__form {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .contact__form-text {
@@ -106,13 +108,13 @@
 }*/
 
 .contact__form-message {
-  flex-basis: 69%;
+  flex-basis: 68%;
   padding-top: 7px;
 }
 
 .contact__form-textarea {
   padding: 10px;
-  width: 100%;
+  width: 97%;
   height: 60.2%;
   border: 1px solid #f6f6f6;
   background-color: #fbfbfb;
@@ -124,7 +126,7 @@
 }
 
 .contact__form-checkbox {
-  letter-spacing: 1;
+  letter-spacing: 1px;
   margin-left: 15px;
   cursor: pointer;
 }
@@ -136,7 +138,6 @@
   background-color: #15514f;
   color: #fff;
   margin-top: 35px;
-  margin-left: 80%;
 
     &:hover {
       background-color: #103d3b;
@@ -189,6 +190,7 @@ input:required:valid {
   .contact__form-btn {
     width: 160px;
     align-self: flex-end;
+    margin-left: 0;
   }
 }
 

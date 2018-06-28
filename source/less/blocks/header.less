@@ -34,9 +34,19 @@
 .header__link {
   color: #b4b3b3;
   text-decoration: none;
+  padding: 5px;
 
   &:hover {
-    color: #1f2c2c; 
+    color: #1f2c2c;
+  }
+
+  &:active {
+    color: #0b2928;
+  }
+
+  &:focus {
+    color: #0b2928;
+    outline-color: #0b2928;
   }
 }
 
@@ -46,6 +56,11 @@
   text-decoration: none;
   line-height: 1;
   font-weight: 600;
+  padding: 5px;
+
+  &:focus {
+    outline-color: #0b2928;
+  }
 }
 
 @media (max-width: 730px) {
