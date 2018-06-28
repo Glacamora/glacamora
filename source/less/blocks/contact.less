@@ -1,8 +1,8 @@
 .contact {
   display: flex;
   flex-direction: row;
-  padding-top: 50px;
-  padding-bottom: 100px;
+  padding-top: 100px;
+  padding-bottom: 150px;
 }
 
 .contact__title {
@@ -42,7 +42,7 @@
 
   &_checkbox {
     margin-top: 10px;
-    flex-basis: 32%;
+    flex-basis: 39%;
     margin-left: 7px;
     position: relative;
   }
@@ -70,10 +70,6 @@
   content: "";
   border: 1px solid rgba(37, 142, 138, .5);
   border-radius: 2px;
-  background-image: url("../img/i_checkbox.png");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: 18px;
   background-color: #fff;
   position: absolute;
   width: 20px;
@@ -83,7 +79,10 @@
 }
 
 .contact__form-input-checkbox:checked+.contact__form-checkbox::before {
-    background-image: none;
+    background-image: url("../img/i_checkbox.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 18px;
 }
 
 .contact__form-input-checkbox:hover+.contact__form-checkbox::before {
@@ -94,15 +93,27 @@
     border-color: rgba(37, 142, 138, 1);
 }
 
+/*.contact__form-input-checkbox+.contact__form-checkbox::after {
+  content: "";
+  border: 1px solid rgba(255, 0, 0, .5);
+  border-radius: 2px;
+  background-color: #fff;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: -3px;
+  left: -5px;
+}*/
+
 .contact__form-message {
   flex-basis: 69%;
   padding-top: 7px;
 }
 
 .contact__form-textarea {
-  padding: 16px 10px;
+  padding: 10px;
   width: 100%;
-  height: 12.4%;
+  height: 60.2%;
   border: 1px solid #f6f6f6;
   background-color: #fbfbfb;
 
@@ -114,7 +125,7 @@
 
 .contact__form-checkbox {
   letter-spacing: 1;
-  padding-left: 15px;
+  margin-left: 15px;
   cursor: pointer;
 }
 
@@ -134,6 +145,22 @@
     &:active {
       background-color: #0b2928;
     }
+
+    &:focus {
+      background-color: #0b2928;
+    }
+}
+
+.contact__form-error {
+  border-color: rgba(255, 0, 0, .4);
+}
+
+.contact__form-error-checkbox {
+  border-bottom: 1px solid rgba(255, 0, 0, .4);
+}
+
+input:required:valid {
+  border-color: yellow;
 }
 
 @media (min-width: 1184px) {
