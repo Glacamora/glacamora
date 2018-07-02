@@ -39,6 +39,12 @@
     }
 }
 
+.main__about-certificates {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
 .main__about-img {
   img {
     cursor: zoom-out;
@@ -55,14 +61,24 @@
   margin-top: 40px;
   margin-right: 40px;
   padding-bottom: 10px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
 }
 
-.main__about-overlay{
+.main__about-overlay {
   display: none;
   position: absolute;
-  left: -30%;
-  top: -95%;
   z-index: 999;
+
+  &_basic {
+    transform: translate(0, -45%);
+  }
+
+  &_prof {
+    transform: translate(-51%, -45%);
+  }
 }
 
 .main__about-overlay .main__about-img{
@@ -74,6 +90,21 @@
 }
 
 @media (max-width: 712px) {
+  .main__about-certificates {
+    justify-content: center;
+  }
+
+.main__about-overlay {
+
+  &_basic {
+    transform: translate(-4%, -45%);
+  }
+
+  &_prof {
+    transform: translate(-55%, -45%);
+  }
+}
+
   .main__about {
     flex-direction: column;
   }
