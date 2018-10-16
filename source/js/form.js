@@ -19,6 +19,8 @@ if(form != undefined || form != null)
       email.classList.add("contact-error");
       confidence.classList.add("contact-error");
       text.classList.add("contact-error");
+
+      return false;
     }
 
 
@@ -27,6 +29,8 @@ if(form != undefined || form != null)
       email.addEventListener("focus", function(event) {
         event.preventDefault();
         email.classList.remove("contact__form-error");
+
+        return false;
       });
     }
 
@@ -35,6 +39,8 @@ if(form != undefined || form != null)
       confidenceInput.addEventListener("focus", function(event) {
         event.preventDefault();
         confidence.classList.remove("contact__form-error-checkbox");
+
+        return false;
       });
     }
 
@@ -43,6 +49,8 @@ if(form != undefined || form != null)
       text.addEventListener("focus", function(event) {
         event.preventDefault();
         text.classList.remove("contact__form-error");
+
+        return false;
       });
     }
 
@@ -51,12 +59,34 @@ if(form != undefined || form != null)
       email.addEventListener("focus", function(event) {
         event.preventDefault();
         email.classList.remove("contact__form-error");
+
+        return false;
       });
     }
+
+    sendMessage(text.value);
   });
 }
 
 function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
+}
+
+function sendMessage(text){
+    var data = new FormData();
+    data.append("text", "sdfl nifj38ufia fsajd ff ");
+
+    var xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+
+    xhr.addEventListener("readystatechange", function () {
+      if (this.readyState === 4) {
+        alert("Ваше сообщение отправлено!");
+      }
+    });
+
+    xhr.open("POST", "../php/sendtomail.php");
+
+    xhr.send(data);
 }
