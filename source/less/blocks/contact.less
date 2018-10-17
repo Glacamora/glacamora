@@ -166,7 +166,7 @@ input:required:valid {
 
 @media (min-width: 1184px) {
   .contact__form-fieldset:first-of-type {
-    padding-right: 45px;
+    padding-right: 25px;
   }
 }
 
@@ -188,7 +188,7 @@ input:required:valid {
   }
 
   .contact__form-btn {
-    width: 160px;
+    /*width: 160px;*/
     align-self: flex-end;
     margin-left: 0;
   }
@@ -210,6 +210,16 @@ input:required:valid {
         position: absolute;
         top: 40px;
         width: 99px;
+      }
+    }
+
+    &_ru {
+
+      h2 {
+
+        &::before {
+          width: 160px;
+        }
       }
     }
 }
