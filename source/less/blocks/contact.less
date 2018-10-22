@@ -6,14 +6,16 @@
 }
 
 .contact__title {
-  padding-right: 50px;
-  flex-basis: 21%;
+  /*flex-basis: 21%;
   text-align: right;
+  max-width: 150px;*/
 
     h2 {
       margin-top: 0;
       margin-bottom: 0;
       font-size: 25px;
+      text-align: left;
+      width: 150px;
     }
 }
 
@@ -188,7 +190,6 @@ input:required:valid {
   }
 
   .contact__form-btn {
-    /*width: 160px;*/
     align-self: flex-end;
     margin-left: 0;
   }
@@ -201,8 +202,11 @@ input:required:valid {
   }
 
   .contact__title {
+    margin: 0 auto;
+
     h2 {
       position: relative;
+      text-align: center;
 
       &::before {
         content: "";
@@ -218,7 +222,7 @@ input:required:valid {
       h2 {
 
         &::before {
-          width: 160px;
+          width: 105px;
         }
       }
     }
